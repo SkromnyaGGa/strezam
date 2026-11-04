@@ -1,5 +1,6 @@
 <section id="practice" class="section practice-section">
 	<div class="container">
+		<p class="eyebrow eyebrow--left practice-kicker"><span>подвійний механізм</span></p>
 		<h2><?php echo esc_html( strezam_field( 'practice_title', 'Що це означає для клінічної практики?' ) ); ?></h2>
 		<div class="practice-grid">
 			<article class="practice-card">

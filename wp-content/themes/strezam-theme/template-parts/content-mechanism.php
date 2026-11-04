@@ -12,6 +12,7 @@
 				<h3>Стимуляція нейротрофічного фактора BDNF</h3>
 				<p>Етіфоксин стимулює синтез нейростероїдів (алопрегнанолону)</p>
 			</article>
+			<div class="ribbon-equals" aria-hidden="true">=</div>
 			<p class="ribbon-result">Анксіолітична дія</p>
 		</div>
 	</div>

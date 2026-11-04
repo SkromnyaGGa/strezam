@@ -16,7 +16,7 @@ $files = array(
 					<span class="file-icon" aria-hidden="true"></span>
 					<h3><?php echo esc_html( $file[0] ); ?></h3>
 					<p><?php echo esc_html( $file[1] ); ?></p>
-					<a href="#materials">Завантажити .pdf <span aria-hidden="true">↓</span></a>
+					<a class="file-download" href="#materials">Завантажити .pdf <span aria-hidden="true">↓</span></a>
 				</article>
 			<?php endforeach; ?>
 		</div>
@@ -27,6 +27,9 @@ $files = array(
 				<a class="btn btn-primary" href="#materials">Завантажити інструкцію <span aria-hidden="true">↓</span></a>
 				<p class="rx-note">Стрезам®. Відпускається за рецептом лікаря. Biocodex, Франція.</p>
 			</div>
+			<?php if ( $photo ) : ?>
+				<img class="closing-photo" src="<?php echo esc_url( $photo ); ?>" alt="">
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

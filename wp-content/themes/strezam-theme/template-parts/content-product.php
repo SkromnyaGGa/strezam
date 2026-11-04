@@ -20,9 +20,18 @@
 				<span class="video-time">00:58</span>
 			</div>
 			<ul class="dose-row">
-				<li><strong>Доза</strong><span>50 мг (1 капсула)</span></li>
-				<li><strong>Частота</strong><span>2–3 рази на добу</span></li>
-				<li><strong>Тривалість</strong><span>Згідно з клінічною ситуацією</span></li>
+				<li>
+					<span class="dose-icon dose-icon--pill" aria-hidden="true"></span>
+					<span class="dose-copy"><strong>Доза</strong><span>50 мг (1 капсула)</span></span>
+				</li>
+				<li>
+					<span class="dose-icon dose-icon--calendar" aria-hidden="true"></span>
+					<span class="dose-copy"><strong>Частота</strong><span>2–3 рази на добу</span></span>
+				</li>
+				<li>
+					<span class="dose-icon dose-icon--clock" aria-hidden="true"></span>
+					<span class="dose-copy"><strong>Тривалість</strong><span>Згідно з клінічною ситуацією</span></span>
+				</li>
 			</ul>
 		</div>
 	</div>

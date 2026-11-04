@@ -200,6 +200,6 @@
 			<span>На користь етіфоксину (Стрезам®) →</span>
 		</div>
 		<p class="citation">Vicente B. et al. Psychopharmacology. 2020;237(11):3357-3367.</p>
-		<p class="chart-actions"><a class="btn btn-primary" href="#evidence">Переглянути всі дослідження <span aria-hidden="true">→</span></a></p>
+		<p class="chart-actions"><a class="btn btn-primary" href="<?php echo esc_url( strezam_research_url() ); ?>">Переглянути всі дослідження <span aria-hidden="true">→</span></a></p>
 	</div>
 </section>

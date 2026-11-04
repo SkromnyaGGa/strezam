@@ -91,13 +91,37 @@ function strezam_image( $key, $fallback_file ) {
 /**
  * Design navigation used until a menu is assigned in wp-admin.
  */
+/**
+ * Homepage section URL that still works from inner pages.
+ *
+ * @param string $anchor Section id without a hash.
+ */
+function strezam_section_url( $anchor ) {
+	return home_url( '/#' . ltrim( $anchor, '#' ) );
+}
+
+/**
+ * Permalink of the Research page.
+ */
+function strezam_research_url() {
+	$page = get_page_by_path( 'research' );
+	if ( $page instanceof WP_Post ) {
+		return get_permalink( $page );
+	}
+
+	return home_url( '/research/' );
+}
+
+/**
+ * Design navigation used until a menu is assigned in wp-admin.
+ */
 function strezam_primary_menu_fallback() {
 	$links = array(
-		array( '#mechanism', 'Механізм дії' ),
-		array( '#practice', 'Переваги' ),
-		array( '#indications', 'Пацієнту' ),
-		array( '#evidence', 'Докази' ),
-		array( '#product', 'Як призначати' ),
+		array( strezam_section_url( 'mechanism' ), 'Механізм дії' ),
+		array( strezam_section_url( 'practice' ), 'Переваги' ),
+		array( strezam_section_url( 'indications' ), 'Пацієнту' ),
+		array( strezam_research_url(), 'Докази' ),
+		array( strezam_section_url( 'product' ), 'Як призначати' ),
 	);
 
 	echo '<ul class="nav-menu">';
@@ -108,7 +132,10 @@ function strezam_primary_menu_fallback() {
 			esc_html( $link[1] )
 		);
 	}
-	echo '<li class="btn-instruction"><a href="#materials">Інструкція</a></li>';
+	printf(
+		'<li class="btn-instruction"><a href="%s">Інструкція</a></li>',
+		esc_url( strezam_section_url( 'materials' ) )
+	);
 	echo '</ul>';
 }
 

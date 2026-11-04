@@ -1419,6 +1419,8 @@ body.admin-bar .site-header { top: 32px; }
 	margin: 0;
 }
 
+.hama-card-title { display: none; margin: 0; }
+
 .hama-axis-title {
 	writing-mode: vertical-rl;
 	transform: rotate(180deg);
@@ -1489,11 +1491,183 @@ body.admin-bar .site-header { top: 32px; }
 	.research-2026-head,
 	.research-facts,
 	.hama-layout,
-	.safety-layout,
-	.hama-row,
-	.conclusion-card { grid-template-columns: 1fr; }
-	.hama-axis-title { writing-mode: horizontal-tb; transform: none; }
-	.hama-scale { margin-left: 0; }
+	.safety-layout { grid-template-columns: 1fr; }
+
+	.research-scroll {
+		overflow: visible;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
 	.study-table,
-	.endpoint-table { min-width: 760px; }
+	.endpoint-table {
+		display: block;
+		min-width: 0;
+		background: transparent;
+		border-radius: 0;
+	}
+
+	.study-table thead,
+	.endpoint-table thead { display: none; }
+
+	.study-table tbody,
+	.study-table tfoot,
+	.endpoint-table tbody { display: block; }
+
+	.study-table tr {
+		display: block;
+		margin: 0 0 14px;
+		border: 1px solid #ece8f6;
+		border-radius: 16px;
+		overflow: hidden;
+		background: #fff;
+	}
+
+	.study-table th,
+	.study-table td {
+		display: block;
+		width: auto;
+		border-bottom: 1px solid #eeeaf8;
+	}
+
+	.study-table tbody th {
+		background: #6b46e5;
+		color: #fff;
+		white-space: normal;
+		font-size: 18px;
+		border-bottom: 0;
+	}
+
+	.study-table tbody th::before {
+		content: "Назва дослідження";
+		display: block;
+		margin-bottom: 4px;
+		color: rgba(255, 255, 255, 0.82);
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	.study-table td { color: var(--indigo); font-weight: 700; }
+
+	.study-table td::before {
+		content: attr(data-label);
+		display: block;
+		margin-bottom: 4px;
+		color: #8d89a6;
+		font-size: 13px;
+		font-weight: 500;
+	}
+
+	.study-table td.is-empty { display: none; }
+
+	.study-table tfoot tr { background: #f3f0ff; border: 0; }
+
+	.study-table tfoot th {
+		background: transparent;
+		color: var(--indigo);
+		font-size: 16px;
+		border-bottom: 0;
+	}
+
+	.study-table tfoot th::before { content: none; }
+
+	.study-table tfoot td {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		background: transparent;
+		border: 0;
+		padding-top: 4px;
+		padding-bottom: 8px;
+		font-size: 28px;
+		line-height: 1.1;
+	}
+
+	.study-table tfoot td::before { order: 2; margin: 0; }
+
+	.endpoint-table tr {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 12px;
+		border: 1px solid #ece8f6;
+		border-radius: 16px;
+		overflow: hidden;
+		background: #fff;
+	}
+
+	.endpoint-table td {
+		display: block;
+		border: 0;
+		background: #fff;
+	}
+
+	.endpoint-table tbody tr:nth-child(even) td,
+	.endpoint-table tbody tr td:first-child { background: #fff; }
+
+	.endpoint-table td:first-child {
+		width: 100%;
+		color: var(--indigo);
+		font-weight: 600;
+	}
+
+	.endpoint-table td:first-child::before {
+		content: "Показники";
+		display: block;
+		margin-bottom: 4px;
+		color: #8d89a6;
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	.endpoint-table td:nth-child(n+2) {
+		width: 50%;
+		background: #f4f1ff;
+		text-align: left;
+		white-space: normal;
+		font-size: 22px;
+	}
+
+	.endpoint-table tbody tr:nth-child(even) td:nth-child(n+2) { background: #f4f1ff; }
+
+	.endpoint-table td:nth-child(n+2)::before {
+		content: attr(data-label);
+		display: block;
+		margin-bottom: 4px;
+		color: var(--indigo);
+		font-size: 13px;
+		font-weight: 700;
+	}
+
+	.hama-chart {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 16px;
+		border-radius: 18px;
+		background: #fff;
+		box-shadow: var(--shadow);
+	}
+
+	.hama-card-title {
+		display: block;
+		margin-bottom: 8px;
+		color: var(--indigo);
+		font-weight: 800;
+	}
+
+	.hama-axis-title {
+		writing-mode: horizontal-tb;
+		transform: none;
+		margin-bottom: 8px;
+		color: #8d89a6;
+		font-weight: 600;
+	}
+
+	.hama-row { grid-template-columns: 1fr; gap: 6px; }
+	.hama-scale { margin-left: 0; }
+	.hama-bar { height: 28px; }
+
+	.conclusion-card {
+		grid-template-columns: 72px 1fr;
+		align-items: start;
+	}
 }

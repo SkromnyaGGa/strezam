@@ -63,20 +63,20 @@ get_header();
 						<?php foreach ( $studies as $row ) : ?>
 							<tr>
 								<th scope="row"><?php echo esc_html( $row[0] ); ?></th>
-								<td><?php echo esc_html( $row[1] ); ?></td>
-								<td><?php echo esc_html( $row[2] ); ?></td>
-								<td><?php echo esc_html( $row[3] ); ?></td>
-								<td><?php echo esc_html( $row[4] ); ?></td>
+								<td data-label="Критерії включення"><?php echo esc_html( $row[1] ); ?></td>
+								<td data-label="Кількість пацієнтів на етифоксині"><?php echo esc_html( $row[2] ); ?></td>
+								<td data-label="Добове дозування"><?php echo esc_html( $row[3] ); ?></td>
+								<td data-label="Контрольна група (Порівняння)"><?php echo esc_html( $row[4] ); ?></td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>
 					<tfoot>
-						<tr>
+						<tr class="study-total">
 							<th scope="row">Загальна кількість пацієнтів</th>
-							<td></td>
-							<td>839</td>
-							<td></td>
-							<td>917</td>
+							<td class="is-empty"></td>
+							<td data-label="Кількість пацієнтів на етифоксині">839</td>
+							<td class="is-empty"></td>
+							<td data-label="Контрольна група (Порівняння)">917</td>
 						</tr>
 					</tfoot>
 				</table>
@@ -160,6 +160,7 @@ get_header();
 				</div>
 
 				<figure class="hama-chart">
+					<p class="hama-card-title">Середня зміна балів за шкалою тривоги HAM-A через 28 днів лікування</p>
 					<span class="hama-axis-title">Зменшення балів HAM-A</span>
 					<div class="hama-plot">
 						<div class="hama-row">
@@ -195,8 +196,8 @@ get_header();
 						<?php foreach ( $endpoints as $endpoint ) : ?>
 							<tr>
 								<td><?php echo esc_html( $endpoint[0] ); ?></td>
-								<td><?php echo esc_html( $endpoint[1] ); ?></td>
-								<td><?php echo esc_html( $endpoint[2] ); ?></td>
+								<td data-label="Етифоксин"><?php echo esc_html( $endpoint[1] ); ?></td>
+								<td data-label="Альпразолам"><?php echo esc_html( $endpoint[2] ); ?></td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>

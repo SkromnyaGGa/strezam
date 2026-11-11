@@ -1,10 +1,18 @@
 <?php
-$photo   = strezam_asset( 'hero-image.png' );
+$photo   = strezam_figma( 'hero-photo.png' );
 $product = strezam_figma( 'hero-product.png' );
 $shadow  = strezam_figma( 'hero-shadow.svg' );
 ?>
 <section class="hero-section">
-	<img class="hero-bg" src="<?php echo esc_url( $photo ); ?>" alt="">
+	<div class="hero-visual">
+		<div class="hero-photo-frame">
+			<img class="hero-bg" src="<?php echo esc_url( $photo ); ?>" alt="">
+		</div>
+		<img class="hero-shadow" src="<?php echo esc_url( $shadow ); ?>" alt="">
+		<div class="hero-pack">
+			<img src="<?php echo esc_url( $product ); ?>" alt="Упаковка Стрезам, 60 капсул по 50 мг">
+		</div>
+	</div>
 	<div class="hero-scrim" aria-hidden="true"></div>
 	<div class="hero-copy">
 		<h1 class="hero-title">
@@ -18,9 +26,5 @@ $shadow  = strezam_figma( 'hero-shadow.svg' );
 			<a href="#mechanism" class="btn btn-primary">Дізнатися більше <img src="<?php echo esc_url( strezam_figma( 'icon-arrow.svg' ) ); ?>" alt="" width="18" height="18"></a>
 			<a href="#materials" class="btn btn-outline">Інструкція</a>
 		</div>
-	</div>
-	<img class="hero-shadow" src="<?php echo esc_url( $shadow ); ?>" alt="">
-	<div class="hero-pack">
-		<img src="<?php echo esc_url( $product ); ?>" alt="Упаковка Стрезам, 60 капсул по 50 мг">
 	</div>
 </section>

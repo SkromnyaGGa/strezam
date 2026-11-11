@@ -23,7 +23,8 @@
 			<?php endif; ?>
 		</div>
 		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
-			<span class="nav-toggle-box" aria-hidden="true"></span>
+			<img class="nav-icon nav-icon--open" src="<?php echo esc_url( strezam_figma( 'icon-menu.svg' ) ); ?>" alt="" width="22" height="22">
+			<img class="nav-icon nav-icon--close" src="<?php echo esc_url( strezam_figma( 'icon-menu-close.svg' ) ); ?>" alt="" width="22" height="22">
 			<span class="screen-reader-text">Меню</span>
 		</button>
 		<nav id="site-navigation" class="main-navigation" aria-label="Головне меню">

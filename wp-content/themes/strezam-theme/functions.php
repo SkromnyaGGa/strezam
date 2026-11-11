@@ -89,6 +89,24 @@ function strezam_image( $key, $fallback_file ) {
 }
 
 /**
+ * URL of a file exported from the Figma design.
+ *
+ * @param string $file File name inside assets/images/figma.
+ */
+function strezam_figma( $file ) {
+	return get_template_directory_uri() . '/assets/images/figma/' . ltrim( $file, '/' );
+}
+
+/**
+ * URL of an image in the theme images folder.
+ *
+ * @param string $file File name, including spaces.
+ */
+function strezam_asset( $file ) {
+	return get_template_directory_uri() . '/assets/images/' . rawurlencode( $file );
+}
+
+/**
  * Design navigation used until a menu is assigned in wp-admin.
  */
 /**
@@ -162,7 +180,7 @@ function strezam_scripts() {
 
 	wp_enqueue_style(
 		'strezam-fonts',
-		'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap',
 		array(),
 		null
 	);

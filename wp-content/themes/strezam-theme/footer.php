@@ -1,8 +1,12 @@
 <footer id="colophon" class="site-footer">
-	<div class="container">
+	<div class="container-wide">
 		<div class="footer-top">
-			<a class="footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img src="<?php echo esc_url( strezam_image( 'site_logo', 'logo.png' ) ); ?>" alt="Стрезам">
+			<a class="brand-logo brand-logo--footer" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Стрезам">
+				<img class="logo-word" src="<?php echo esc_url( strezam_figma( 'logo-word-light.png' ) ); ?>" alt="">
+				<img class="logo-underline" src="<?php echo esc_url( strezam_figma( 'logo-underline.svg' ) ); ?>" alt="">
+				<img class="logo-line" src="<?php echo esc_url( strezam_figma( 'logo-line.svg' ) ); ?>" alt="">
+				<img class="logo-mark" src="<?php echo esc_url( strezam_figma( 'logo-mark-a.svg' ) ); ?>" alt="">
+				<img class="logo-mark logo-mark--b" src="<?php echo esc_url( strezam_figma( 'logo-mark-b.svg' ) ); ?>" alt="">
 			</a>
 			<nav class="footer-nav" aria-label="Меню в підвалі">
 				<a href="<?php echo esc_url( strezam_section_url( 'mechanism' ) ); ?>">Механізм дії</a>
@@ -17,7 +21,7 @@
 				<h2>Про препарат</h2>
 				<p>Зареєстровано в Україні, Р.П. № UA/XXXX/01/01 від DD.MM.YYYY.</p>
 				<p>Категорія відпуску: рецептом.</p>
-				<a class="footer-link" href="<?php echo esc_url( strezam_section_url( 'materials' ) ); ?>">Відкрити повну інструкцію для медичного застосування</a>
+				<a class="footer-link" href="<?php echo esc_url( strezam_section_url( 'materials' ) ); ?>"><img src="<?php echo esc_url( strezam_figma( 'icon-file.svg' ) ); ?>" alt="" width="20" height="20">Відкрити повну інструкцію для медичного застосування</a>
 			</section>
 			<section>
 				<h2>Представництво в Україні:</h2>

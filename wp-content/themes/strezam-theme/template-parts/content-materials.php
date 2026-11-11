@@ -1,5 +1,5 @@
 <?php
-$photo = strezam_image( 'banner_photo', 'main-photo.png' );
+$photo = strezam_image( 'banner_photo', 'pre-footer.png' );
 $files = array(
 	array( 'Коротка інформація для лікаря', 'Ключові дані про механізм дії та клінічні докази — дві сторінки для лікаря' ),
 	array( 'Презентація про механізм дії', 'Ключові дані про механізм дії та клінічні докази — дванадцять сторінок для лікаря' ),
@@ -13,7 +13,7 @@ $files = array(
 		<div class="file-grid">
 			<?php foreach ( $files as $file ) : ?>
 				<article class="file-card">
-					<span class="file-icon" aria-hidden="true"></span>
+					<img class="file-icon" src="<?php echo esc_url( strezam_asset( 'document icon.png' ) ); ?>" alt="" width="40" height="40">
 					<h3><?php echo esc_html( $file[0] ); ?></h3>
 					<p><?php echo esc_html( $file[1] ); ?></p>
 					<a class="file-download" href="#materials">Завантажити .pdf <span aria-hidden="true">↓</span></a>
@@ -24,12 +24,9 @@ $files = array(
 			<div class="closing-copy">
 				<h2><?php echo esc_html( strezam_field( 'banner_title', 'Стрезам — у фокусі на пацієнта' ) ); ?></h2>
 				<p>Більше можливостей для контролю тривоги завдяки подвійному механізму дії</p>
-				<a class="btn btn-primary" href="#materials">Завантажити інструкцію <span aria-hidden="true">↓</span></a>
+				<a class="btn btn-primary" href="#materials">Завантажити інструкцію <img src="<?php echo esc_url( strezam_figma( 'icon-arrow.svg' ) ); ?>" alt="" width="18" height="18"></a>
 				<p class="rx-note">Стрезам®. Відпускається за рецептом лікаря. Biocodex, Франція.</p>
 			</div>
-			<?php if ( $photo ) : ?>
-				<img class="closing-photo" src="<?php echo esc_url( $photo ); ?>" alt="">
-			<?php endif; ?>
 		</div>
 	</div>
 </section>

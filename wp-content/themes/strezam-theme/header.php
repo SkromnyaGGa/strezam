@@ -8,13 +8,17 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header id="masthead" class="site-header">
-	<div class="container header-bar">
+	<div class="container-wide header-bar">
 		<div class="site-logo">
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php echo esc_url( strezam_image( 'site_logo', 'logo.png' ) ); ?>" alt="Стрезам">
+				<a class="brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Стрезам">
+					<img class="logo-word" src="<?php echo esc_url( strezam_figma( 'logo-word.png' ) ); ?>" alt="">
+					<img class="logo-underline" src="<?php echo esc_url( strezam_figma( 'logo-underline.svg' ) ); ?>" alt="">
+					<img class="logo-line" src="<?php echo esc_url( strezam_figma( 'logo-line.svg' ) ); ?>" alt="">
+					<img class="logo-mark" src="<?php echo esc_url( strezam_figma( 'logo-mark-a.svg' ) ); ?>" alt="">
+					<img class="logo-mark logo-mark--b" src="<?php echo esc_url( strezam_figma( 'logo-mark-b.svg' ) ); ?>" alt="">
 				</a>
 			<?php endif; ?>
 		</div>

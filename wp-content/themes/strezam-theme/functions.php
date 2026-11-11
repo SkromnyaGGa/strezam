@@ -180,7 +180,7 @@ function strezam_scripts() {
 
 	wp_enqueue_style(
 		'strezam-fonts',
-		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap',
 		array(),
 		null
 	);
